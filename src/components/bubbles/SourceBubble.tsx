@@ -5,7 +5,7 @@ type Props = {
 };
 export const SourceBubble = (props: Props) => (
   <>
-    <div
+    {/* <div
       data-modal-target="defaultModal"
       data-modal-toggle="defaultModal"
       class="flex justify-start mb-2 items-start animate-fade-in host-container hover:brightness-90 active:brightness-75"
@@ -27,6 +27,6 @@ export const SourceBubble = (props: Props) => (
       >
         {props.pageContent}
       </span>
-    </div>
+    </div> */}
   </>
 );
