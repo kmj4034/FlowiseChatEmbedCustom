@@ -436,3 +436,8 @@ textarea {
   padding: 10px 10px;
   font-family: 'Poppins', sans-serif;
 }
+
+.floating-image {
+  width: 196px !important;
+  height: auto !important;
+}
