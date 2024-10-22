@@ -15,16 +15,20 @@ const defaultRight = '20';
 export const BubbleButton = (props: Props) => {
   return (
     <div class="relative">
-      {/* <img
+      <img
         src="https://static-files-theh.s3.ap-northeast-2.amazonaws.com/floatingImage.png"
-        alt="Additional icon"
-        class="absolute left-1/2 transform -translate-x-1/2 -translate-y-full mb-2 floating-image"
+        alt="Floating image"
+        class="fixed pointer-events-none"
         style={{
-          bottom: 'calc(100% + 9px)',
-          width: '196px !important', // 이미지 크기에 맞게 조정하세요
+          width: '150px',
           height: 'auto',
+          'z-index': 42424242,
+          // right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+          right: '20px',
+          bottom: props.bottom ? `${(Number(props.bottom) + 123).toString()}px` : `${Number(defaultBottom) + 123}px`,
+          border: 'none',
         }}
-      /> */}
+      />
       <button
         part="button"
         onClick={() => props.toggleBot()}
@@ -34,9 +38,9 @@ export const BubbleButton = (props: Props) => {
         }
         style={{
           'background-color': props.backgroundColor ?? defaultButtonColor,
-          'z-index': 42424242,
+          'z-index': 42424243,
           right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
-          bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+          bottom: props.bottom ? `${(Number(props.bottom) + 67).toString()}px` : `${(Number(defaultBottom) + 67).toString()}px`,
           border: 'none',
         }}
       >
@@ -82,6 +86,39 @@ export const BubbleButton = (props: Props) => {
             d="M18.601 8.39897C18.269 8.06702 17.7309 8.06702 17.3989 8.39897L12 13.7979L6.60099 8.39897C6.26904 8.06702 5.73086 8.06702 5.39891 8.39897C5.06696 8.73091 5.06696 9.2691 5.39891 9.60105L11.3989 15.601C11.7309 15.933 12.269 15.933 12.601 15.601L18.601 9.60105C18.9329 9.2691 18.9329 8.73091 18.601 8.39897Z"
           />
         </svg>
+      </button>
+      <button
+        part="button"
+        onClick={() => window.open('https://chat.aitheh.com', '_blank')}
+        class={
+          `fixed shadow-md rounded-full hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
+          (props.size === 'large' ? ' w-16 h-16' : ' w-12 h-12')
+        }
+        style={{
+          'background-color': props.backgroundColor ?? defaultButtonColor,
+          'z-index': 42424243,
+          right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+          bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+          border: 'none',
+          'border-radius': '9999px',
+          background: 'var(--GR_01, linear-gradient(180deg, #5D7CF6 0%, #4E3CF4 100%))',
+          'box-shadow': '0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10)',
+        }}
+      >
+        <span
+          style={{
+            color: '#FFF',
+            'font-family': 'Pretendard',
+            'font-size': '12.33px',
+            'font-style': 'normal',
+            'font-weight': 600,
+            'line-height': '15.413px' /* 125% */,
+          }}
+        >
+          상담
+          <br />
+          시작
+        </span>
       </button>
     </div>
   );
