@@ -16,7 +16,7 @@ export const BubbleButton = (props: Props) => {
   return (
     <div class="relative">
       <img
-        src="https://static-files-theh.s3.ap-northeast-2.amazonaws.com/floatingImage.png"
+        src="https://static-files-theh.s3.ap-northeast-2.amazonaws.com/bubble-icon.png"
         alt="Floating image"
         class="fixed pointer-events-none"
         style={{
@@ -24,8 +24,8 @@ export const BubbleButton = (props: Props) => {
           height: 'auto',
           'z-index': 42424242,
           // right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
-          right: '20px',
-          bottom: props.bottom ? `${(Number(props.bottom) + 123).toString()}px` : `${Number(defaultBottom) + 123}px`,
+          right: '35px',
+          bottom: props.bottom ? `${(Number(props.bottom) + 150).toString()}px` : `${Number(defaultBottom) + 150}px`,
           border: 'none',
         }}
       />
@@ -34,14 +34,16 @@ export const BubbleButton = (props: Props) => {
         onClick={() => props.toggleBot()}
         class={
           `fixed shadow-md rounded-full hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
-          (props.size === 'large' ? ' w-16 h-16' : ' w-12 h-12')
+          (props.size === 'large' ? ' w-17 h-16' : ' w-12 h-12')
         }
         style={{
           'background-color': props.backgroundColor ?? defaultButtonColor,
           'z-index': 42424243,
-          right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
-          bottom: props.bottom ? `${(Number(props.bottom) + 67).toString()}px` : `${(Number(defaultBottom) + 67).toString()}px`,
+          // right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+          right: '13px',
+          bottom: props.bottom ? `${(Number(props.bottom) + 72).toString()}px` : `${(Number(defaultBottom) + 72).toString()}px`,
           border: 'none',
+          'box-shadow': 'none',
         }}
       >
         <Show when={isNotDefined(props.customIconSrc)} keyed>
@@ -63,9 +65,9 @@ export const BubbleButton = (props: Props) => {
           <img
             src={props.customIconSrc}
             class={
-              'rounded-full object-cover' +
+              'object-cover' +
               (props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100') +
-              (props.size === 'large' ? ' w-9 h-9' : ' w-9 h-9')
+              (props.size === 'large' ? ' w-20 h-20' : ' w-9 h-9')
             }
             alt="Bubble button icon"
           />
@@ -89,7 +91,7 @@ export const BubbleButton = (props: Props) => {
       </button>
       <button
         part="button"
-        onClick={() => window.open('https://chat.aitheh.com', '_blank')}
+        onClick={() => window.open('https://chat.aitheh.com/loan/start?isCommonUser=true', '_blank')}
         class={
           `fixed shadow-md rounded-full hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in` +
           (props.size === 'large' ? ' w-16 h-16' : ' w-12 h-12')
@@ -97,22 +99,24 @@ export const BubbleButton = (props: Props) => {
         style={{
           'background-color': props.backgroundColor ?? defaultButtonColor,
           'z-index': 42424243,
-          right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+          // right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+          right: '20px',
           bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
           border: 'none',
-          'border-radius': '9999px',
+          'border-radius': '22px',
           background: 'var(--GR_01, linear-gradient(180deg, #5D7CF6 0%, #4E3CF4 100%))',
-          'box-shadow': '0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10)',
+          // 'box-shadow': '0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.10)',
+          'box-shadow': '0px 6.529px 8.94px 0px rgba(0, 0, 0, 0.12)',
         }}
       >
         <span
           style={{
             color: '#FFF',
             'font-family': 'Pretendard',
-            'font-size': '12.33px',
+            'font-size': '18px',
             'font-style': 'normal',
             'font-weight': 600,
-            'line-height': '15.413px' /* 125% */,
+            'line-height': '24px' /* 125% */,
           }}
         >
           상담

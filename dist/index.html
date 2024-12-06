@@ -1,14 +1,15 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot Test</title>
 </head>
-<body style="background-color: #0016bd;" >
+<body style="background-color: #fff;" >
     <h1>Chatbot Test Page</h1>
     <script type="module">
-        import Chatbot from 'http://localhost:5678/web.js';
+        // import Chatbot from 'https://cdn.jsdelivr.net/gh/kmj4034/FlowiseChatEmbedCustom@main/dist/web.js';
+        import Chatbot from './web.js';
         Chatbot.init({
         chatflowid: "8c2e632a-781d-4bd7-a7c1-342c8112d619",
         apiHost: "https://flowiseai-railway-production-4bd1.up.railway.app",
@@ -17,13 +18,13 @@
         },
         theme: {
           button: {
-            backgroundColor: "#fff",
+            backgroundColor: "tranparent",
             right: 20,
             bottom: 20,
-            size: "medium",
+            size: "large",
             iconColor: "#000",
             customIconSrc:
-              "https://static-files-theh.s3.ap-northeast-2.amazonaws.com/1on1.png",
+              "https://static-files-theh.s3.ap-northeast-2.amazonaws.com/h-logo.png",
           },
           chatWindow: {
             showTitle: true,
@@ -61,4 +62,4 @@
       });
     </script>
 </body>
-</html> -->
+</html>
